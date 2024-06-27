@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './angular-ngrx/store/counter.reducer';
+import { photoReducer } from './angular-ngrx/store/photo.reducer';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { counterReducer } from './angular-ngrx/store/counter.reducer';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ count: counterReducer })
+    StoreModule.forRoot({ count: counterReducer, image: photoReducer } )
   ],
   providers: [],
   bootstrap: [AppComponent]
